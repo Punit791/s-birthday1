@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Happy Birthday Sejal ❤️</title>
+   <script type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=j-s0x6UTm82fUm3z6K8hMXR7EdClR5v8UPx2ry4zCO172Ex-NHhh37MwhzU2FJXHgXeHr7AWJq7kKcqCfzwY5fa8jhK6lsLJ-sPEifIj_fpqVxgU_EE14w8ufCLftxRxRady29q5SkxekPWkLu9mDmi8RGOVrL8pMFmXno5VlzKNtO01QUKMidgCiMW90yl5INDy71zKPJXm7JZSHlz1czbip4nZCQNUdwwZXt-9pyVpXlJ_PwkXxnPgZDJrhwqClNmOeLYltTB-AQdsQIGU7TMKM5c3geRgAjHe53K7vwrl7d6xP2OI5ucsjkUOVgLG"
+      charset="UTF-8"></script>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box
+      }
+
+      body {
+         font-family: Segoe UI, sans-serif;
+         background: #140018;
+         color: #fff;
+         overflow: hidden
+      }
+
+      .screen {
+         display: none;
+         position: absolute;
+         inset: 0;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         text-align: center;
+         padding: 20px
+      }
+
+      .active {
+         display: flex
+      }
+
+      .cover {
+         background: url('images/cover.jpg') center/cover
+      }
+
+      .overlay {
+         background: rgba(0, 0, 0, .55);
+         padding: 25px;
+         border-radius: 25px;
+         max-width: 420px
+      }
+
+      .btn {
+         padding: 12px 24px;
+         border: none;
+         border-radius: 30px;
+         background: #ff4fa3;
+         color: #fff;
+         font-size: 16px;
+         cursor: pointer
+      }
+
+      .card {
+         background: rgba(255, 255, 255, .12);
+         backdrop-filter: blur(8px);
+         padding: 20px;
+         border-radius: 20px;
+         max-width: 700px
+      }
+
+      .dots {
+         display: flex;
+         gap: 10px;
+         margin: 20px
+      }
+
+      .dot {
+         width: 16px;
+         height: 16px;
+         border: 2px solid #fff;
+         border-radius: 50%
+      }
+
+      .fill {
+         background: #fff
+      }
+
+      .keypad {
+         display: grid;
+         grid-template-columns: repeat(3, 70px);
+         gap: 10px
+      }
+
+      .key {
+         padding: 16px;
+         border: none;
+         border-radius: 50%;
+         background: #ffffff22;
+         color: #fff
+      }
+
+      .progress {
+         width: 260px;
+         height: 10px;
+         background: #333;
+         border-radius: 10px;
+         overflow: hidden
+      }
+
+      .bar {
+         height: 100%;
+         width: 0;
+         background: #ff4fa3
+      }
+
+      .slide {
+         width: 90%;
+         max-width: 340px;
+         border-radius: 20px;
+         box-shadow: 0 0 25px rgba(255, 255, 255, .2)
+      }
+
+      .caption {
+         margin-top: 15px;
+         color: #ffd6eb;
+         font-size: 18px
+      }
+
+      .heart {
+         position: absolute;
+         animation: rise 8s linear infinite
+      }
+
+      @keyframes rise {
+         from {
+            transform: translateY(100vh)
+         }
+
+         to {
+            transform: translateY(-100px)
+         }
+      }
+
+      .star {
+         position: absolute;
+         animation: twinkle 2s infinite alternate
+      }
+
+      #coverHearts,
+      #finalFx {
+         position: fixed;
+         inset: 0;
+         pointer-events: none;
+         overflow: hidden;
+      }
+
+      @keyframes twinkle {
+         from {
+            opacity: .2
+         }
+
+         to {
+            opacity: 1
+         }
+      }
+   </style>
+</head>
+
+<body>
+
+   \
+
+
+   <div id="s1" class="screen active cover">
+      <div id="coverHearts"></div>
+      <div class="overlay">
+         <h1>Happy Birthday Sejal ❤️</h1><br>
+         <p>A small surprise made specially for you.</p><br>
+         <button class="btn" onclick="show('s2');hideCoverHearts()">Tap To Begin ✨</button>
+      </div>
+   </div>
+
+   <div id="s2" class="screen">
+      <h2>Enter Passcode</h2>
+      <div class="dots">
+         <div class="dot"></div>
+         <div class="dot"></div>
+         <div class="dot"></div>
+         <div class="dot"></div>
+      </div>
+      <div class="keypad" id="keys"></div>
+   </div>
+
+   <div id="s3" class="screen">
+      <h2>Preparing Your Surprise...</h2><br>
+      <div class="progress">
+         <div id="bar" class="bar"></div>
+      </div>
+   </div>
+
+   <div id="s4" class="screen">
+      <h1>💌</h1><br>
+      <p>Tap to open your letter</p><br>
+      <button class="btn" onclick="show('s5')">Open Letter</button>
+   </div>
+
+   <div id="s5" class="screen">
+      <div class="card">
+         <h2>Happy Birthday Sejal 🎂✨</h2><br>
+         <p>
+            Today is all about you.<br><br>
+            I wanted to do something different that might make you smile.<br><br>
+            You are one of those people who leave an impact without even realizing it.
+            Your smile, your energy and the way you are are things I genuinely admire.<br><br>
+            May this year bring you happiness, peace, success and countless reasons to smile.<br><br>
+            Thank you for being the wonderful person you are.<br><br>
+            Happy Birthday once again ❤️<br><br>
+            - Punit
+         </p><br>
+         <button class="btn" onclick="startCake()">Cake Surprise 🎂</button>
+      </div>
+   </div>
+
+   <div id="s6" class="screen">
+      <h1 style="font-size:120px">🎂</h1>
+      <h2>Make A Wish</h2>
+      <h1 id="count">3</h1>
+   </div>
+
+   <div id="s7" class="screen">
+      <h2>Memories & Wishes ✨</h2><br>
+      <img id="slide" class="slide" src="images/photo1.jpg">
+      <div id="cap" class="caption"></div>
+   </div>
+
+   <div id="s8" class="screen">
+      <div class="card">
+         <h2>Before This Ends... ❤️</h2><br>
+         <p>
+            Thank you for your kindness.<br>
+            Thank you for your smile.<br>
+            Thank you for the moments that made me happy.<br><br>
+            No matter what happens in the future,<br>
+            I will always wish the best for you.<br><br>
+            Happy Birthday Sejal ❤️<br><br>
+            - Punit
+         </p>
+      </div>
+   </div>
+
+   <div id="s9" class="screen">
+      <div id="finalFx"></div>
+      <h1>Happy Birthday Sejal ❤️</h1>
+      <br>
+      <h3>Thank You For Being You ❤️<br><br>- Punit</h3>
+
+      <audio id="music" src="music/iwannabeyours.mp3"></audio>
+
+      <script>
+         function show(id) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+         }
+
+         const cover = document.getElementById('coverHearts');
+         for (let i = 0; i < 25; i++) {
+            let h = document.createElement('div');
+            h.className = 'heart';
+            h.innerHTML = '❤️';
+            h.style.left = Math.random() * 100 + 'vw';
+            h.style.animationDuration = (5 + Math.random() * 5) + 's';
+            cover.appendChild(h);
+         }
+         function hideCoverHearts() {
+            cover.innerHTML = '';
+         }
+
+         let pass = '';
+         const dots = document.querySelectorAll('.dot');
+         const keys = document.getElementById('keys');
+         ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '⌫'].forEach(v => {
+            let b = document.createElement('button');
+            b.className = 'key'; b.textContent = v;
+            b.onclick = () => {
+               if (v === '⌫') pass = pass.slice(0, -1);
+               else if (pass.length < 4) pass += v;
+               dots.forEach((d, i) => d.classList.toggle('fill', i < pass.length));
+               if (pass.length === 4) {
+                  if (pass === '2004') {
+                     show('s3');
+                     let w = 0;
+                     let t = setInterval(() => {
+                        w += 4; document.getElementById('bar').style.width = w + '%';
+                        if (w >= 100) { clearInterval(t); show('s4'); }
+                     }, 70);
+                  } else {
+                     alert('Wrong Passcode');
+                     pass = '';
+                     dots.forEach(d => d.classList.remove('fill'));
+                  }
+               }
+            };
+            keys.appendChild(b);
+         });
+
+         function startCake() {
+            show('s6');
+            let c = 3;
+            let el = document.getElementById('count');
+            let t = setInterval(() => {
+               c--;
+               if (c > 0) el.innerText = c;
+               else {
+                  clearInterval(t);
+                  document.getElementById('music').play().catch(() => { });
+                  startSlideshow();
+               }
+            }, 1000);
+         }
+
+         const imgs = [
+            'images/photo1.jpg',
+            'images/photo2.jpg',
+            'images/photo3.jpg',
+            'images/photo4.jpg',
+            'images/photo5.jpg'
+         ];
+
+         const caps = [
+            'Some people are special without even trying. ✨',
+            'A beautiful heart is always more attractive than a beautiful face. 🌸',
+            'Thank you for being part of my story. 💖',
+            'Your smile deserves more happy days. ☀️',
+            'May this year be kinder to you than the last one. 🌷'
+         ];
+
+         function startSlideshow() {
+            show('s7');
+            let i = 0;
+            const img = document.getElementById('slide');
+            const cap = document.getElementById('cap');
+            cap.innerText = caps[0];
+
+            let t = setInterval(() => {
+               i++;
+               if (i >= imgs.length) {
+                  clearInterval(t);
+                  show('s8');
+                  setTimeout(() => {
+                     show('s9');
+                     createFinalFx();
+                  }, 8000);
+                  return;
+               }
+               img.src = imgs[i];
+               cap.innerText = caps[i];
+            }, 3000);
+         }
+
+         function createFinalFx() {
+            const fx = document.getElementById('finalFx');
+            for (let i = 0; i < 40; i++) {
+               let s = document.createElement('div');
+               s.className = 'star';
+               s.innerHTML = '✦';
+               s.style.left = Math.random() * 100 + 'vw';
+               s.style.top = Math.random() * 100 + 'vh';
+               fx.appendChild(s);
+            }
+            for (let i = 0; i < 20; i++) {
+               let h = document.createElement('div');
+               h.className = 'heart';
+               h.innerHTML = '❤️';
+               h.style.left = Math.random() * 100 + 'vw';
+               fx.appendChild(h);
+            }
+         }
+      </script>
+</body>
+
+</html>
